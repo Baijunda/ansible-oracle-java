@@ -121,12 +121,12 @@
 - name: compose url for downloading file, if necessary
   set_fact:
     jdk_tarball_url:  "http://download.oracle.com/otn-pub/java/jdk/{{ jdk_version_detail }}/{{ jdk_tarball_file }}"
-  when: jdk_version_detail is defined && java_custom_download_url_prefix is not defined
+  when: jdk_version_detail is defined and java_custom_download_url_prefix is not defined
 
 - name: compose url for custom downloading file, if necessary
   set_fact:
     jdk_tarball_url:  "{{ java_custom_download_url_prefix }}/{{ jdk_tarball_file }}"
-  when: jdk_version_detail is defined && java_custom_download_url_prefix is defined
+  when: jdk_version_detail is defined and java_custom_download_url_prefix is defined
 
 
 #
