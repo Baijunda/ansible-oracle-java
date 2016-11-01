@@ -19,3 +19,5 @@ java_remove_download: true
 java_install_jce: false
 
 java_set_javahome: false
+
+java_custom_download_url_prefix: http://106.75.69.9/repo/java
